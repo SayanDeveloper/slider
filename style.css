@@ -29,6 +29,14 @@ section{
 	z-index: 1;
 	width: 100%;
 }
+#textcont
+{
+	padding: 20px;
+	width: 100%;
+	height: 10%;
+	background-color: #83858b6e;
+	color: rgb(255, 79, 78);
+}
 .section-title{
 	float: left;
 	position: relative;

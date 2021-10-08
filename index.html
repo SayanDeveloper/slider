@@ -7,9 +7,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
-    
+    <div id="textcont">
+      <h1 id="txt"></h1>
+    </div>
 <section class="total-home-slider">
     <div class="testimonials-carousel-wrap">
         <div class="testimonials-carousel">
@@ -93,7 +96,17 @@
 </section>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+ <script>
+    var typed2 = new Typed('#txt', {
+    strings: ['Swiper.js is Awesome', ' <strong>Create</strong>', 'Your Own Crousel'],
+    typeSpeed: 0,
+    backSpeed: 0,
+    fadeOut: true,
+    cursorChar: '',
+    loop: true
+  });
+ </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="scripts.js"></script>
