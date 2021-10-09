@@ -12,7 +12,7 @@
   
 
 # PR Instructions :
-1. **Cretae A Separate Folder**
+1. **Create A Separate Folder**
 2. **Add all your files**
 3. **Explain What you have done in the code** 
   
