@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="section-stick">
+        <div class="stick active"></div>
+      </div>
+
+      <section class="s1">
+        <div class="home">
+          <span>Scroll</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M5 6l5 5l5-5l2 1l-7 7l-7-7z" fill="#fff"/><rect x="0" y="0" width="20" height="20" fill="rgba(0, 0, 0, 0)" /></svg>
+        </div>
+      </section>
+      <section class="s2"><img src = "../3.jpg"><p style="font-size:40%;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et </p></section> <section class="s3"><img src = "../4.jpg"><p style="font-size:40%;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et </p></section> <section class="s4"><img src = "../6.jpg"><p style="font-size:40%;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et </p></section>
+    </div>
+
+    <script>
+      const TIME_OUT = 600 
+      const body = document.querySelector('body')
+      const sectionsQty = document.querySelectorAll('section').length
+      const sectionStick = document.querySelector('.section-stick')
+
+      let startFlag = true
+      let initialScroll = window.scrollY
+      let qty = 1,
+        main = null,
+        next = null
+
+      Array(sectionsQty)
+        .fill()
+        .forEach(() => {
+          sectionStick.innerHTML = sectionStick.innerHTML + '<div class="stick"></div>'
+        })
+
+      window.onscroll = () => {
+        if (startFlag) {
+          const scrollDown = this.scrollY >= initialScroll
+          const scrollLimit = qty >= 1 && qty <= sectionsQty
+
+          if (scrollLimit) {
+            body.style.overflowY = 'hidden' // Lock el scroll
+
+            if (scrollDown && qty < sectionsQty) {
+              main = document.querySelector(`section.s${qty}`)
+              next = document.querySelector(`section.s${qty + 1}`)
+
+              main.style.transform = 'translateY(-100vh)'
+              next.style.transform = 'translateY(0)'
+
+              qty++
+            } else if (!scrollDown && qty > 1) {
+              main = document.querySelector(`section.s${qty - 1}`)
+              next = document.querySelector(`section.s${qty}`)
+
+              main.style.transform = 'translateY(0)'
+              next.style.transform = 'translateY(100vh)'
+
+              qty--
+            }
+
+         
+            const active = document.querySelector('.section-stick .stick.active')
+            active.style.top = (62 + 30) * (qty - 1) + 'px'
+          }
+
+          console.log('SLIDE', qty)
+
+          setTimeout(() => {
+            initialScroll = this.scrollY
+            startFlag = true
+            body.style.overflowY = 'scroll' 
+          }, TIME_OUT)
+
+          startFlag = false
+        }
+
+        window.scroll(0, window.screen.height)
+      }
+    </script>
+  </body>
+</html>
