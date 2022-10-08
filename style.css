@@ -198,7 +198,7 @@ i.half-star {
 	box-shadow: 0 9px 26px rgba(58, 87,135,0.1);
 }
 .swiper-slide-active .testimonials-text {
-	background: #fff;
+	background: #ffdddd;
 	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.185);
 }
 .testimonials-text p{
