@@ -17,8 +17,6 @@
 1. **Create A Separate Folder**
 2. **Add all your files**
 3. **Explain What you have done in the code** 
-  
-# 
-  
+    
 # **<p align="center"> Enjoy Hacktoberfest 2022**
 
