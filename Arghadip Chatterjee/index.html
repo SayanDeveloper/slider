@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+    <title>Document</title>
+</head>
+<style>
+
+  body{
+    background-color: aquamarine;
+  }
+  .swiper {
+        width: 50%;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background:white;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-client-msg{
+        padding: 5rem 5rem;
+        background:var(--white);
+        border-radius: 1rem;
+        text-align: left;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+      .swiper-client-msg h4{
+        font-weight: 800;
+        font-style: italic;
+      }
+      .swiper-slide img{
+        max-width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        border: 0.5rem solid var(--helper-tint);
+      }
+
+      .swiper-client-msg::before{
+        content:"";
+        position: absolute;
+        bottom: -10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5rem solid var(--white);
+        border-color: transparent;
+        border-top-color: var(--helper-tint);
+      }
+
+      .swiper-client-data{
+        align-items: center;
+        margin-top: 3.2rem;
+        gap: 3.2rem;
+      }
+
+      .swiper-client-msg p::before{
+        content: "\f10d";
+        position:absolute;
+        top: 0;
+        left:2rem;
+        font-size: 5rem;
+        color: #ced3ff;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+      }
+
+      .swiper-client-msg p::after{
+        content: "\f10e";
+        position:absolute;
+        bottom: 0;
+        right:2rem;
+        font-size: 5rem;
+        color: #ced3ff;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+      }
+#container {
+  font-size: 7rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
+</style>
+<body>
+    <section class="section-section-testimonial">
+        <div id =container>
+          <h2 class="common heading">Happy Clients</h2>
+        </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <h4>Worth Every Single Penny</h4>
+              <p>The best Biryani in college canteen(NSEC).Rates are very reasonable and the biryani is just really yummy.You have to wait a little bit but the wait is totally worth it.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-5.jpg">
+              </figure>
+              <div class="client-data-details">
+                <p>Harry Hoffmann</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <h4>Taste of Tibet</h4>
+              <p>Mouthwatering delicious momos are just awesome.Lots of spices and vegetables are stuffed inside a thin coating.Perfect combination with the chutney in a very cheap price.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-1.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Tim Hoffmann</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-1.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Vinod Thapa</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-1.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Vinod Thapa</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>-->
+          <!--<div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-1.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Vinod Thapa</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>-->
+          <div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <h4>Excellent Cheese Sandwiches</h4>
+              <p>I just got a chance to eat a grilled cheese sandwich here.The green chutney actually made a difference to the taste and the cheese combination was delightful.It is awesome.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-4.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Liza Elizabeth</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <h4>Hotness of Hotdogs</h4>
+              <p>Hot and delicious freshly made hotdogs. The chicken hotdogs tastes fresh, juicy and tender. Different types of varieties are available in a cheap rate.They are just really awesome and tasty!!.It is yummy.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-3.png">
+              </figure>
+              <div class="client-data-details">
+                <p>James Taylor</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <h4>Best Burger Joint</h4>
+              <p>One of the best burger in my life.Patty stuffed inside the buns is so soft, juicy and tender and yummy. I am still thinking of the cheddar cheese and sauce.Just amazing.Try it for sure.It is awesome!</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-2.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Olivia Wilson</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="swiper-slide">
+            <div class="swiper-client-msg">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="swiper-client-data grid grid-two-column">
+              <figure>
+                <img src="images/pic-1.png">
+              </figure>
+              <div class="client-data-details">
+                <p>Vinod Thapa</p>
+                <p>Enterpreneur</p>
+              </div>
+            </div>
+          </div>-->
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+      </div>
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay:{
+      delay:2500,
+      disableOnInteraction:false,
+
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 2,
+        },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+</body>
+</html>
