@@ -1,0 +1,1 @@
+I have made a swiper using HTML,CSS,JS. This swiper is for clients visiting a resurant or any place. It is about feedbacks. Happy Coding!!
