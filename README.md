@@ -6,7 +6,7 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/SayanDeveloper) [![Daily Visitors](https://visitor-badge.glitch.me/badge?page_id=SayanDeveloper.slider) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://github.com/SayanDeveloper/slider)
 
-# Accpected PRs :
+# accpected PRs :
 
 - **Different Types Of Sliders**
 - **Different UI of Sliders**
